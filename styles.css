@@ -56,9 +56,11 @@ h5 {font-size: 16px; font-family: 'Open Sans', sans-serif;}
 .header-section .modal .title-col { padding-bottom: 80px; display: flex; flex-direction: column; gap: 20px; background: #f3f3f3;}
 .header-section .modal .title-col img {width: 100%; height: auto; }
 .header-section .modal .title-col .btn {align-self: start;}
-.header-section .modal .categories-col {background: #fafafa;}
+.header-section .modal .categories-col {background: #fafafa; padding: 20px 0;}
+.header-section .modal .categories-col li {padding: 10px 20px; margin-bottom: 0;}
 .header-section .modal .categories-col li i {margin-left: 5px;}
-.header-section .modal .categories-col li:hover {color: var(--primary); cursor: pointer;}
+.header-section .modal .categories-col li:hover { font-weight: 700;cursor: pointer; background-color: #f3f3f3;}
+.header-section .modal .categories-col li.active {font-weight: 700;}
 .header-section .modal .links-col {width: 50%; }
 .header-section .modal ul li {margin-bottom: 10px;}
 .header-section .modal .links-col ul {display: none; flex-wrap: wrap; justify-content: space-between; row-gap: 5px;}

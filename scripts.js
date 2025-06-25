@@ -40,8 +40,9 @@ $('.modal').on('click', function (e) {
     e.stopPropagation();
 });
 
-$('#modal-close').on('click', function () {
-    $('.modal').removeClass('active');
+$('.fa-xmark').on('click', function () {
+    const $modal = $(this).closest('.modal');
+    $modal.removeClass('active');
     $('.nav-item').removeClass('active');
     activeModalId = null;
 });
