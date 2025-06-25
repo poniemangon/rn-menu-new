@@ -17,7 +17,7 @@ let activeModalId = null;
 
 $('.nav-item').on('click', function (e) {
     e.stopPropagation();
-
+    
     const modalId = $(this).data('modal');
 
     $('.modal').removeClass('active');
@@ -27,6 +27,14 @@ $('.nav-item').on('click', function (e) {
         $('#' + modalId).addClass('active');
         $(this).addClass('active');
         activeModalId = modalId;
+        
+        // Reset categories to first one when opening any modal
+        $('.categories li').removeClass('active');
+        $('.links-col ul.links').removeClass('active');
+        
+        // Set first category and first links as active in the current modal
+        $('#' + modalId + ' .categories li').first().addClass('active');
+        $('#' + modalId + ' .links-col ul.links').first().addClass('active');
     }
 });
 
@@ -41,6 +49,12 @@ $('.modal').on('click', function (e) {
 });
 
 $('.fa-xmark').on('click', function () {
+    $('.categories li').removeClass('active');
+    $('.links-col ul.links').removeClass('active');
+
+    $('.categories li').first().addClass('active');
+    $('.links-col ul.links').first().addClass('active');
+
     const $modal = $(this).closest('.modal');
     $modal.removeClass('active');
     $('.nav-item').removeClass('active');
