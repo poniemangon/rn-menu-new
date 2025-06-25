@@ -35,7 +35,7 @@ h5 {font-size: 16px; font-family: 'Open Sans', sans-serif;}
 .header-section ul li {list-style: none;}
 .header-section .row li.nav-item {color: white; text-decoration: none; list-style: none; cursor: pointer; transition: 0.3s; padding: 40px 0; box-sizing: border-box; border-bottom: 4px solid transparent;}
 
-.header-section.scrolled .row li.nav-item {border-bottom: 4px solid white; color: black;}
+.header-section.scrolled .row li.nav-item { color: black;}
 .header-section .row li.nav-item:hover, .header-section .row li.nav-item.active {color: var(--primary); transition: 0.3s; border-bottom: 4px solid var(--primary); box-sizing: border-box; }
 .header-section .row .search i {color: white; font-size: 20px;}
 .header-section .row .nav-col  {display: flex; align-items: center;}
