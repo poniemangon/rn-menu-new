@@ -58,9 +58,9 @@ h5 {font-size: 16px; font-family: 'Open Sans', sans-serif;}
 .header-section .row .search-box i {cursor: pointer; position: relative; z-index: 6;}
 /* SEARCH BOX */
 /* STYLES MODAL */
-.header-section .modal {position: absolute; text-align: left; top: 116px; width: 80vw; max-width: 1200px;   left: 50%;transform: translateX(-50%); background: white;}
+.header-section .modal {position: absolute; text-align: left; top: 116px; width: 80vw; max-width: 1200px;   left: 50%;transform: translateX(-50%); background: white; border-radius: 10px; overflow: hidden; }
 .header-section .modal .row {padding: 0}
-.header-section .modal .col {width: 25%; padding: 20px;}
+.header-section .modal .col {width: 25%; padding: 20px; }
 .header-section .modal .title-col { padding-bottom: 80px; display: flex; flex-direction: column; gap: 20px; background: #f3f3f3;}
 .header-section .modal .title-col img {width: 100%; height: auto; }
 .header-section .modal .title-col .btn {align-self: start;}
@@ -71,10 +71,11 @@ h5 {font-size: 16px; font-family: 'Open Sans', sans-serif;}
 .header-section .modal .categories-col li.active {font-weight: 700;}
 .header-section .modal .links-col {width: 50%; }
 .header-section .modal ul li {margin-bottom: 10px;}
+
 .header-section .modal .links-col ul {display: none; flex-wrap: wrap; justify-content: space-between; row-gap: 5px;}
 .header-section .modal .links-col ul.active {display: flex;}
-.header-section .modal .links-col ul li {width: 50%; padding-bottom: 10px; }
-.header-section .modal .links-col ul li a {color: black; border-bottom: 3px solid white; transition: 0.3s;}
+.header-section .modal .links-col ul li {width: 50%; padding-bottom: 10px;}
+.header-section .modal .links-col ul li a {color: black; border-bottom: 3px solid white; transition: 0.3s; font-size: 14px; }
 .header-section .modal .links-col ul li:hover a {border-bottom: 2px solid var(--primary); transition: 0.3s;}
 .header-section .modal {display: none;}
 .header-section .modal.active {display: block;}
