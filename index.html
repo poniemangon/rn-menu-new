@@ -24,10 +24,12 @@
                 <div class="col nav-col">   
                         <ul class="nav-list d-flex">
                             <li class="nav-item" data-modal="services">Services</li>
-                            <li class="nav-item" data-modal="customer-type">Customer Type</li>
+                            <li class="nav-item" data-modal="sobre-nosotros">Sobre nosotros</li>
                             <li class="nav-item" data-modal="industrias">Industrias</li>
-                            <li class="nav-item" data-modal="about-us">About Us</li>
                         </ul>
+                      
+
+
                         <div class="modal" id="services">
                             <i id="modal-close" class="fa-solid fa-xmark"></i>
                             <div class="row d-flex">
@@ -42,87 +44,67 @@
                                         <li class="active" data-category="1">Marketing<i class="fa-solid fa-chevron-right"></i></li>
                                         <li data-category="2">Web Development<i class="fa-solid fa-chevron-right"></i></li>
                                         <li data-category="3">Diseño Gráfico<i class="fa-solid fa-chevron-right"></i></li>
-                                        <li data-category="4">Comunicación Estratégica<i class="fa-solid fa-chevron-right"></i></li>
-                                        <li data-category="5">Producción Profesionales<i class="fa-solid fa-chevron-right"></i></li>
+                                        <li data-category="4">Communication Estratégica<i class="fa-solid fa-chevron-right"></i></li>
+                                        <li data-category="5">Production profesionales<i class="fa-solid fa-chevron-right"></i></li>
                                         <li data-category="6">IT<i class="fa-solid fa-chevron-right"></i></li>
                                         <li data-category="7">Consultoría<i class="fa-solid fa-chevron-right"></i></li>
                                     </ul>
                                 </div>
-                                <div class="col links-col">
-                                    <ul data-category="1" class="links active">
-                                        <li><a href="">Generación de contenidos</a></li>
-                                        <li><a href="">Marketing automation</a></li>
-                                        <li><a href="">Hubspot</a></li>
-                                        <li><a href="">Marketo</a></li>
-                                        <li><a href="">Manichat</a></li>
-                                        <li><a href="">Linkedin Automation</a></li>
-                                        <li><a href="">Advertising</a></li>
-                                        <li><a href="">SEO</a></li>
-                                        <li><a href="">Email Marketing</a></li>
-                                        <li><a href="">Social Media</a></li>
-                                        <li><a href="">Producciones SM</a></li>
+                                <div class="col subcategories-col">
+                                    <ul class="subcategories active" data-category="1">
+                                        <li class="has-children" data-subcategory="1-1">Generación de contenidos<i class="fa-solid fa-chevron-right"></i></li>
+                                        <li class="link-subcat" data-subcategory="1-2"><a href="#">Automation</a></li>
+                                        <li class="link-subcat" data-subcategory="1-3"><a href="#">Advertising</a></li>
+                                        <li class="link-subcat" data-subcategory="1-4"><a href="#">SEO</a></li>
+                                        <li class="link-subcat" data-subcategory="1-5"><a href="#">Email Marketing</a></li>
+                                        <li class="has-children" data-subcategory="1-6">Social Media<i class="fa-solid fa-chevron-right"></i></li>
                                     </ul>
-                                    <ul data-category="2" class="links">
-                                        <li><a href="">ERP / Sistemas de gestión</a></li>
-                                        <li><a href="">Wordpress</a></li>
-                                        <li><a href="">Institucionales</a></li>
-                                        <li><a href="">Laravel</a></li>
-                                        <li><a href="">Support</a></li>
-                                        <li><a href="">eCommerce</a></li>
-                                        <li><a href="">Integraciones</a></li>
+                                    <ul class="subcategories" data-category="2">
+                                        <li class="has-children" data-subcategory="2-1">ERP / Sistemas gestión<i class="fa-solid fa-chevron-right"></i></li>
+                                        <li class="link-subcat" data-subcategory="2-2"><a href="#">Institucionales</a></li>
+                                        <li class="link-subcat" data-subcategory="2-3"><a href="#">Support</a></li>
+                                        <li class="link-subcat" data-subcategory="2-4"><a href="#">eCommerce</a></li>
+                                        <li class="link-subcat" data-subcategory="2-5"><a href="#">Integraciones</a></li>
                                     </ul>
-                                    <ul data-category="3" class="links">
-                                        <li><a href="">Branding</a></li>
-                                        <li><a href="">Diseño de Piezas</a></li>
-                                        <li><a href="">Diseño de sistemas gráficos</a></li>
-                                        <li><a href="">Diseño Web</a></li>
+                                    <ul class="subcategories" data-category="3">
+                                        <li class="link-subcat" data-subcategory="3-1"><a href="#">Branding</a></li>
+                                        <li class="link-subcat" data-subcategory="3-2"><a href="#">Diseño de Piezas</a></li>
+                                        <li class="link-subcat" data-subcategory="3-3"><a href="#">Diseño de sistemas gráficos</a></li>
+                                        <li class="link-subcat" data-subcategory="3-4"><a href="#">Diseño Web</a></li>
                                     </ul>
-                                    <ul data-category="4" class="links">
-                                        <li><a href="">Social Media</a></li>
-                                        <li><a href="">Generación de contenidos</a></li>
-                                        <li><a href="">Branding</a></li>
-                                        <li><a href="">Prensa</a></li>
+                                    <ul class="subcategories" data-category="4">
+                                        <li class="link-subcat" data-subcategory="4-1"><a href="#">Social Media</a></li>
+                                        <li class="link-subcat" data-subcategory="4-2"><a href="#">Generación de contenidos</a></li>
+                                        <li class="link-subcat" data-subcategory="4-3"><a href="#">Branding</a></li>
+                                        <li class="link-subcat" data-subcategory="4-4"><a href="#">Prensa</a></li>
                                     </ul>
-                                    <ul data-category="5" class="links">
-                                        <li><a href="">Multi-media 2D/3D</a></li>
-                                        <li><a href="">Filmmaker</a></li>
+                                    <ul class="subcategories" data-category="5">
+                                        <li class="link-subcat" data-subcategory="5-1"><a href="#">Multi-media 2D/3D</a></li>
+                                        <li class="link-subcat" data-subcategory="5-2"><a href="#">Filmmaker</a></li>
                                     </ul>
-                                    <ul data-category="6" class="links">
-                                        <li><a href="">Seguridad informática</a></li>
-                                        <li><a href="">Web & Cloud Servers</a></li>
+                                    <ul class="subcategories" data-category="6">
+                                        <li class="link-subcat" data-subcategory="6-1"><a href="#">Seguridad informática</a></li>
+                                        <li class="link-subcat" data-subcategory="6-2"><a href="#">Web & Cloud Servers</a></li>
                                     </ul>
-                                    <ul data-category="7" class="links">
-                                        <li><a href="">Transformaciones digitales</a></li>
-                                        <li><a href="">Plan de Marketing</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal" id="customer-type">
-                            <i id="modal-close" class="fa-solid fa-xmark"></i>
-                            <div class="row d-flex">
-                                <div class="col title-col">
-                                    <img src="https://as2.ftcdn.net/jpg/05/92/84/35/1000_F_592843588_onD2aiPmHae5jPo2DjuKyo8uylJjduNK.jpg" alt="">
-                                    <h4>Customer Type</h4>
-                                    <p>Soluciones adaptadas a diferentes tipos de empresas y organizaciones.</p>
-                                    <a href="" class="btn">Learn More</a>
-                                </div>
-                                <div class="col categories-col">
-                                    <ul class="categories">
-                                        <li class="active" data-category="1">Enterprise<i class="fa-solid fa-chevron-right"></i></li>
-                                        <li data-category="2">Startups<i class="fa-solid fa-chevron-right"></i></li>
-                                        <li data-category="3">SMB<i class="fa-solid fa-chevron-right"></i></li>
+                                    <ul class="subcategories" data-category="7">
+                                        <li class="link-subcat" data-subcategory="7-1"><a href="#">Transformaciones digitales</a></li>
+                                        <li class="link-subcat" data-subcategory="7-2"><a href="#">Plan de Marketing</a></li>
                                     </ul>
                                 </div>
                                 <div class="col links-col">
-                                    <ul data-category="1" class="links active">
-                                        <li><a href="">Más información</a></li>
+                                    <ul class="links" data-subcategory="1-1">
+                                        <li><a href="#">Hubspot</a></li>
+                                        <li><a href="#">Marketo</a></li>
+                                        <li><a href="#">Manychat</a></li>
                                     </ul>
-                                    <ul data-category="2" class="links">
-                                        <li><a href="">Más información</a></li>
+                                    <ul class="links" data-subcategory="1-6">
+                                        <li><a href="#">Producciones SM</a></li>
+                                        <li><a href="#">Linkedin Automation</a></li>
+                                        <li><a href="#">Salesforce</a></li>
                                     </ul>
-                                    <ul data-category="3" class="links">
-                                        <li><a href="">Más información</a></li>
+                                    <ul class="links" data-subcategory="2-1">
+                                        <li><a href="#">Wordpress</a></li>
+                                        <li><a href="#">Laravel</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -150,139 +132,125 @@
                                         <li data-category="10">Consumer Goods & CPG<i class="fa-solid fa-chevron-right"></i></li>
                                     </ul>
                                 </div>
+                                <div class="col subcategories-col">
+                                    <ul class="subcategories active" data-category="1">
+                                        <li class="link-subcat" data-subcategory="1-1"><a href="#">Toribio</a></li>
+                                        <li class="link-subcat" data-subcategory="1-2"><a href="#">Zarco</a></li>
+                                        <li class="link-subcat" data-subcategory="1-3"><a href="#">Austria Construcciones</a></li>
+                                        <li class="link-subcat" data-subcategory="1-4"><a href="#">Powem</a></li>
+                                        <li class="link-subcat" data-subcategory="1-5"><a href="#">Lattu</a></li>
+                                        <li class="link-subcat" data-subcategory="1-6"><a href="#">Civile</a></li>
+                                        <li class="link-subcat" data-subcategory="1-7"><a href="#">Balguam</a></li>
+                                        <li class="link-subcat" data-subcategory="1-8"><a href="#">dBuenos Aires</a></li>
+                                    </ul>
+                                    <ul class="subcategories" data-category="2">
+                                        <li class="link-subcat" data-subcategory="2-1"><a href="#">Boarding pass</a></li>
+                                        <li class="link-subcat" data-subcategory="2-2"><a href="#">CVT</a></li>
+                                        <li class="link-subcat" data-subcategory="2-3"><a href="#">Cines</a></li>
+                                        <li class="link-subcat" data-subcategory="2-4"><a href="#">Twist</a></li>
+                                        <li class="link-subcat" data-subcategory="2-5"><a href="#">Demo Tour</a></li>
+                                    </ul>
+                                    <ul class="subcategories" data-category="3">
+                                        <li class="link-subcat" data-subcategory="3-1"><a href="#">Bcc Credomatic</a></li>
+                                        <li class="link-subcat" data-subcategory="3-2"><a href="#">Panam Finance</a></li>
+                                        <li class="link-subcat" data-subcategory="3-3"><a href="#">Num Finance</a></li>
+                                        <li class="link-subcat" data-subcategory="3-4"><a href="#">RMA Finance</a></li>
+                                    </ul>
+                                    <ul class="subcategories" data-category="4">
+                                        <li class="link-subcat" data-subcategory="4-1"><a href="#">Fundacion Santa Maria</a></li>
+                                        <li class="link-subcat" data-subcategory="4-2"><a href="#">DrZeta</a></li>
+                                        <li class="link-subcat" data-subcategory="4-3"><a href="#">Centro Medico Paternal</a></li>
+                                        <li class="link-subcat" data-subcategory="4-4"><a href="#">Yoga</a></li>
+                                    </ul>
+                                    <ul class="subcategories" data-category="5">
+                                        <li class="link-subcat" data-subcategory="5-1"><a href="#">Insalio</a></li>
+                                        <li class="link-subcat" data-subcategory="5-2"><a href="#">RDA</a></li>
+                                        <li class="link-subcat" data-subcategory="5-3"><a href="#">Pontis</a></li>
+                                    </ul>
+                                    <ul class="subcategories" data-category="6">
+                                        <li class="link-subcat" data-subcategory="6-1"><a href="#">UW</a></li>
+                                        <li class="link-subcat" data-subcategory="6-2"><a href="#">Lucatoni</a></li>
+                                        <li class="link-subcat" data-subcategory="6-3"><a href="#">Parfumerie</a></li>
+                                        <li class="link-subcat" data-subcategory="6-4"><a href="#">Sonax</a></li>
+                                        <li class="link-subcat" data-subcategory="6-5"><a href="#">DrZeta</a></li>
+                                        <li class="link-subcat" data-subcategory="6-6"><a href="#">Kankay</a></li>
+                                        <li class="link-subcat" data-subcategory="6-7"><a href="#">CAME</a></li>
+                                        <li class="link-subcat" data-subcategory="6-8"><a href="#">Peluffo</a></li>
+                                        <li class="link-subcat" data-subcategory="6-9"><a href="#">Kevingston</a></li>
+                                        <li class="link-subcat" data-subcategory="6-10"><a href="#">Sol y Oro</a></li>
+                                        <li class="link-subcat" data-subcategory="6-11"><a href="#">Quaker</a></li>
+                                    </ul>
+                                    <ul class="subcategories" data-category="7">
+                                        <li class="link-subcat" data-subcategory="7-1"><a href="#">Ayres de Recoleta</a></li>
+                                        <li class="link-subcat" data-subcategory="7-2"><a href="#">Ker</a></li>
+                                        <li class="link-subcat" data-subcategory="7-3"><a href="#">Destinar</a></li>
+                                        <li class="link-subcat" data-subcategory="7-4"><a href="#">Lo Mejor de New York</a></li>
+                                        <li class="link-subcat" data-subcategory="7-5"><a href="#">Ser Argentino</a></li>
+                                        <li class="link-subcat" data-subcategory="7-6"><a href="#">Hotel Reino del plata</a></li>
+                                    </ul>
+                                    <ul class="subcategories" data-category="8">
+                                        <li class="link-subcat" data-subcategory="8-1"><a href="#">Learn Spanish With Ina</a></li>
+                                        <li class="link-subcat" data-subcategory="8-2"><a href="#">UADE</a></li>
+                                    </ul>
+                                    <ul class="subcategories" data-category="9">
+                                        <li class="link-subcat" data-subcategory="9-1"><a href="#">Multicap</a></li>
+                                        <li class="link-subcat" data-subcategory="9-2"><a href="#">Current</a></li>
+                                        <li class="link-subcat" data-subcategory="9-3"><a href="#">Pepsico</a></li>
+                                        <li class="link-subcat" data-subcategory="9-4"><a href="#">ABB</a></li>
+                                        <li class="link-subcat" data-subcategory="9-5"><a href="#">Novecento</a></li>
+                                    </ul>
+                                    <ul class="subcategories" data-category="10">
+                                        <li class="link-subcat" data-subcategory="10-1"><a href="#">Quaver</a></li>
+                                        <li class="link-subcat" data-subcategory="10-2"><a href="#">DiFarina</a></li>
+                                    </ul>
+                                </div>
                                 <div class="col links-col">
-                                    <ul data-category="1" class="links active">
-                                        <li><a href="">Toribio</a></li>
-                                        <li><a href="">Zarco</a></li>
-                                        <li><a href="">Austria Construcciones</a></li>
-                                        <li><a href="">Powen</a></li>
-                                        <li><a href="">Lattui</a></li>
-                                        <li><a href="">Civile</a></li>
-                                        <li><a href="">Balgum</a></li>
-                                        <li><a href="">dbuenos Aires</a></li>
-                                    </ul>
-                                    <ul data-category="2" class="links">
-                                        <li><a href="">Boarding pet</a></li>
-                                        <li><a href="">CVT</a></li>
-                                        <li><a href="">Cines</a></li>
-                                        <li><a href="">Twist</a></li>
-                                        <li><a href="">Demo Tour</a></li>
-                                    </ul>
-                                    <ul data-category="3" class="links">
-                                        <li><a href="">Bac Credomatic</a></li>
-                                        <li><a href="">Panam Finance</a></li>
-                                        <li><a href="">Num Finance</a></li>
-                                        <li><a href="">BMA Finance</a></li>
-                                    </ul>
-                                    <ul data-category="4" class="links">
-                                        <li><a href="">Fundación Santa María</a></li>
-                                        <li><a href="">DrZeta</a></li>
-                                        <li><a href="">Centro Médico Paternal</a></li>
-                                        <li><a href="">Yoga</a></li>
-                                    </ul>
-                                    <ul data-category="5" class="links">
-                                        <li><a href="">Insside</a></li>
-                                        <li><a href="">RDA</a></li>
-                                        <li><a href="">Pontis</a></li>
-                                    </ul>
-                                    <ul data-category="6" class="links">
-                                        <li><a href="">UW</a></li>
-                                        <li><a href="">Lucatti</a></li>
-                                        <li><a href="">Parfumerie</a></li>
-                                        <li><a href="">Sonax</a></li>
-                                        <li><a href="">DrZeta</a></li>
-                                        <li><a href="">Kankay</a></li>
-                                        <li><a href="">CAME</a></li>
-                                        <li><a href="">Pelufo</a></li>
-                                        <li><a href="">Kevingston</a></li>
-                                        <li><a href="">Sol y Oro</a></li>
-                                        <li><a href="">Quaker</a></li>
-                                    </ul>
-                                    <ul data-category="7" class="links">
-                                        <li><a href="">Ayres de Recoleta</a></li>
-                                        <li><a href="">Ker</a></li>
-                                        <li><a href="">Destinar</a></li>
-                                        <li><a href="">Lo Mejor de New York</a></li>
-                                        <li><a href="">Ser Argentino</a></li>
-                                        <li><a href="">Hotel Reino del Plata</a></li>
-                                    </ul>
-                                    <ul data-category="8" class="links">
-                                        <li><a href="">Learn Spanish With Ina</a></li>
-                                        <li><a href="">UADE</a></li>
-                                    </ul>
-                                    <ul data-category="9" class="links">
-                                        <li><a href="">Multicap</a></li>
-                                        <li><a href="">Current</a></li>
-                                        <li><a href="">Pepsico</a></li>
-                                        <li><a href="">ABB</a></li>
-                                        <li><a href="">Novecento</a></li>
-                                    </ul>
-                                    <ul data-category="10" class="links">
-                                        <li><a href="">Quaker</a></li>
-                                        <li><a href="">DiFariña</a></li>
-                                    </ul>
+                                    <!-- Columna vacía porque todas las subcategorías son links directos -->
                                 </div>
                             </div>
                         </div>
-                        <div class="modal" id="about-us">
+                        <div class="modal" id="sobre-nosotros">
                             <i id="modal-close" class="fa-solid fa-xmark"></i>
                             <div class="row d-flex">
                                 <div class="col title-col">
                                     <img src="https://www.cariverplate.com.ar/imagenes/contenidos/2024-09/128-funcionamiento.jpg" alt="">
-                                    <h4>About Us</h4>
+                                    <h4>Sobre nosotros</h4>
                                     <p>Conoce más sobre nuestra empresa, equipo y filosofía de trabajo.</p>
                                     <a href="" class="btn">Learn More</a>
                                 </div>
                                 <div class="col categories-col">
                                     <ul class="categories">
-                                        <li class="active" data-category="1">Eventos<i class="fa-solid fa-chevron-right"></i></li>
-                                        <li data-category="2">Historia<i class="fa-solid fa-chevron-right"></i></li>
-                                        <li data-category="3">Bus<i class="fa-solid fa-chevron-right"></i></li>
-                                        <li data-category="4">Locaciones<i class="fa-solid fa-chevron-right"></i></li>
-                                        <li data-category="5">Trayectoria (Clientes)<i class="fa-solid fa-chevron-right"></i></li>
-                                        <li data-category="6">Social<i class="fa-solid fa-chevron-right"></i></li>
-                                        <li data-category="7">HR / Job Positions<i class="fa-solid fa-chevron-right"></i></li>
-                                        <li data-category="8">Team Profesionales<i class="fa-solid fa-chevron-right"></i></li>
-                                        <li data-category="9">Partnerships<i class="fa-solid fa-chevron-right"></i></li>
-                                        <li data-category="10">Filosofía<i class="fa-solid fa-chevron-right"></i></li>
-                                        <li data-category="11">Contact Us<i class="fa-solid fa-chevron-right"></i></li>
+                                        <li class="active" data-category="1">Oficinas<i class="fa-solid fa-chevron-right"></i></li>
+                                        <li data-category="2">Agencia<i class="fa-solid fa-chevron-right"></i></li>
+                                        <li data-category="3">Clientes<i class="fa-solid fa-chevron-right"></i></li>
+                                        <li data-category="4">Team<i class="fa-solid fa-chevron-right"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="col subcategories-col">
+                                    <ul class="subcategories active" data-category="1">
+                                        <li class="link-subcat" data-subcategory="1-1"><a href="#">USA</a></li>
+                                        <li class="link-subcat" data-subcategory="1-2"><a href="#">Argentina</a></li>
+                                    </ul>
+                                    <ul class="subcategories" data-category="2">
+                                        <li class="link-subcat" data-subcategory="2-1"><a href="#">Eventos / Webinars</a></li>
+                                        <li class="link-subcat" data-subcategory="2-2"><a href="#">Historia</a></li>
+                                        <li class="link-subcat" data-subcategory="2-3"><a href="#">Filosofía</a></li>
+                                        <li class="link-subcat" data-subcategory="2-4"><a href="#">Prensa</a></li>
+                                    </ul>
+                                    <ul class="subcategories" data-category="3">
+                                        <li class="link-subcat" data-subcategory="3-1"><a href="#">Nuestros trabajos</a></li>
+                                        <li class="link-subcat" data-subcategory="3-2"><a href="#">Trayectoria (Clientes)</a></li>
+                                        <li class="link-subcat" data-subcategory="3-3"><a href="#">Social</a></li>
+                                    </ul>
+                                    <ul class="subcategories" data-category="4">
+                                        <li class="link-subcat" data-subcategory="4-1"><a href="#">BUs</a></li>
+                                        <li class="link-subcat" data-subcategory="4-2"><a href="#">HR / Job Positions</a></li>
+                                        <li class="link-subcat" data-subcategory="4-3"><a href="#">Team Profesionales</a></li>
+                                        <li class="link-subcat" data-subcategory="4-4"><a href="#">Partnerships</a></li>
                                     </ul>
                                 </div>
                                 <div class="col links-col">
-                                    <ul data-category="1" class="links active">
-                                        <li><a href="">Más información</a></li>
-                                    </ul>
-                                    <ul data-category="2" class="links">
-                                        <li><a href="">Más información</a></li>
-                                    </ul>
-                                    <ul data-category="3" class="links">
-                                        <li><a href="">Más información</a></li>
-                                    </ul>
-                                    <ul data-category="4" class="links">
-                                        <li><a href="">Más información</a></li>
-                                    </ul>
-                                    <ul data-category="5" class="links">
-                                        <li><a href="">Más información</a></li>
-                                    </ul>
-                                    <ul data-category="6" class="links">
-                                        <li><a href="">Más información</a></li>
-                                    </ul>
-                                    <ul data-category="7" class="links">
-                                        <li><a href="">Más información</a></li>
-                                    </ul>
-                                    <ul data-category="8" class="links">
-                                        <li><a href="">Más información</a></li>
-                                    </ul>
-                                    <ul data-category="9" class="links">
-                                        <li><a href="">Más información</a></li>
-                                    </ul>
-                                    <ul data-category="10" class="links">
-                                        <li><a href="">Más información</a></li>
-                                    </ul>
-                                    <ul data-category="11" class="links">
-                                        <li><a href="">Comercial</a></li>
-                                        <li><a href="">HR</a></li>
-                                    </ul>
+                                    <!-- Columna vacía porque todas las subcategorías son links directos -->
                                 </div>
                             </div>
                         </div>
@@ -309,7 +277,7 @@
                 </div>
             </div>
             
-            <!-- Mobile Navigation Menu -->
+
             <div class="mobile-nav-menu">
                 <div class="mobile-nav-header">
                     <div class="mobile-search">
@@ -319,7 +287,7 @@
                 </div>
                 
                 <div class="mobile-nav-content">
-                    <!-- Services Nav Item -->
+                    <!-- MOBILE MENU SERVICES -->
                     <div class="mobile-nav-item" data-modal="services">
                         <div class="mobile-nav-item-header">
                             <span>Services</span>
@@ -332,17 +300,26 @@
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">Generación de contenidos</a>
-                                    <a href="#">Marketing automation</a>
-                                    <a href="#">Hubspot</a>
-                                    <a href="#">Marketo</a>
-                                    <a href="#">Manichat</a>
-                                    <a href="#">Linkedin Automation</a>
-                                    <a href="#">Advertising</a>
-                                    <a href="#">SEO</a>
-                                    <a href="#">Email Marketing</a>
-                                    <a href="#">Social Media</a>
-                                    <a href="#">Producciones SM</a>
+                                    <div class="mobile-subcat has-children">
+                                        <p class="link-subcat">Generación de contenidos<i class="fa-solid fa-chevron-right chevron"></i></p>
+                                        <div class="mobile-subcat-links">
+                                            <a href="#">Hubspot</a>
+                                            <a href="#">Marketo</a>
+                                            <a href="#">Manychat</a>
+                                        </div>
+                                    </div>
+                                    <a class="mobile-subcat link-subcat" href="#">Automation</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Advertising</a>
+                                    <a class="mobile-subcat link-subcat" href="#">SEO</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Email Marketing</a>
+                                    <div class="mobile-subcat has-children">
+                                        <p class="link-subcat">Social Media<i class="fa-solid fa-chevron-right chevron"></i></p>
+                                        <div class="mobile-subcat-links">
+                                            <a href="#">Producciones SM</a>
+                                            <a href="#">Linkedin Automation</a>
+                                            <a href="#">Salesforce</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="mobile-category" data-category="2">
@@ -351,13 +328,18 @@
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">ERP / Sistemas de gestión</a>
-                                    <a href="#">Wordpress</a>
-                                    <a href="#">Institucionales</a>
-                                    <a href="#">Laravel</a>
-                                    <a href="#">Support</a>
-                                    <a href="#">eCommerce</a>
-                                    <a href="#">Integraciones</a>
+                                    <div class="mobile-subcat has-children">
+                                        <p class="link-subcat">ERP / Sistemas gestión<i class="fa-solid fa-chevron-right chevron"></i></p>
+                                        
+                                        <div class="mobile-subcat-links">
+                                            <a href="#">Wordpress</a>
+                                            <a href="#">Laravel</a>
+                                        </div>
+                                    </div>
+                                    <a class="mobile-subcat link-subcat" href="#">Institucionales</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Support</a>
+                                    <a class="mobile-subcat link-subcat" href="#">eCommerce</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Integraciones</a>
                                 </div>
                             </div>
                             <div class="mobile-category" data-category="3">
@@ -366,32 +348,32 @@
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">Branding</a>
-                                    <a href="#">Diseño de Piezas</a>
-                                    <a href="#">Diseño de sistemas gráficos</a>
-                                    <a href="#">Diseño Web</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Branding</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Diseño de Piezas</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Diseño de sistemas gráficos</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Diseño Web</a>
                                 </div>
                             </div>
                             <div class="mobile-category" data-category="4">
                                 <div class="mobile-category-header">
-                                    <span>Comunicación Estratégica</span>
+                                    <span>Communication Estratégica</span>
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">Social Media</a>
-                                    <a href="#">Generación de contenidos</a>
-                                    <a href="#">Branding</a>
-                                    <a href="#">Prensa</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Social Media</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Generación de contenidos</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Branding</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Prensa</a>
                                 </div>
                             </div>
                             <div class="mobile-category" data-category="5">
                                 <div class="mobile-category-header">
-                                    <span>Producción Profesionales</span>
+                                    <span>Production profesionales</span>
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">Multi-media 2D/3D</a>
-                                    <a href="#">Filmmaker</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Multi-media 2D/3D</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Filmmaker</a>
                                 </div>
                             </div>
                             <div class="mobile-category" data-category="6">
@@ -400,8 +382,8 @@
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">Seguridad informática</a>
-                                    <a href="#">Web & Cloud Servers</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Seguridad informática</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Web & Cloud Servers</a>
                                 </div>
                             </div>
                             <div class="mobile-category" data-category="7">
@@ -410,51 +392,69 @@
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">Transformaciones digitales</a>
-                                    <a href="#">Plan de Marketing</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Transformaciones digitales</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Plan de Marketing</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Customer Type Nav Item -->
-                    <div class="mobile-nav-item" data-modal="customer-type">
+                    <!-- MOBILE MENU SOBRE NOSOTROS -->
+                    <div class="mobile-nav-item" data-modal="sobre-nosotros">
                         <div class="mobile-nav-item-header">
-                            <span>Customer Type</span>
+                            <span>Sobre nosotros</span>
                             <i class="fa-solid fa-chevron-right chevron"></i>
                         </div>
                         <div class="mobile-nav-categories">
                             <div class="mobile-category" data-category="1">
                                 <div class="mobile-category-header">
-                                    <span>Enterprise</span>
+                                    <span>Oficinas</span>
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">Más información</a>
+                                    <a class="mobile-subcat link-subcat" href="#">USA</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Argentina</a>
                                 </div>
                             </div>
                             <div class="mobile-category" data-category="2">
                                 <div class="mobile-category-header">
-                                    <span>Startups</span>
+                                    <span>Agencia</span>
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">Más información</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Eventos / Webinars</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Historia</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Filosofía</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Prensa</a>
                                 </div>
                             </div>
                             <div class="mobile-category" data-category="3">
                                 <div class="mobile-category-header">
-                                    <span>SMB</span>
+                                    <span>Clientes</span>
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">Más información</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Nuestros trabajos</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Trayectoria (Clientes)</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Social</a>
+                                </div>
+                            </div>
+                            <div class="mobile-category" data-category="4">
+                                <div class="mobile-category-header">
+                                    <span>Team</span>
+                                    <i class="fa-solid fa-chevron-right chevron"></i>
+                                </div>
+                                <div class="mobile-category-links">
+                                    <a class="mobile-subcat link-subcat" href="#">BUs</a>
+                                    <a class="mobile-subcat link-subcat" href="#">HR / Job Positions</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Team Profesionales</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Partnerships</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Industrias Nav Item -->
+                    <!-- MOBILE MENU INDUSTRIAS -->
                     <div class="mobile-nav-item" data-modal="industrias">
                         <div class="mobile-nav-item-header">
                             <span>Industrias</span>
@@ -467,14 +467,14 @@
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">Toribio</a>
-                                    <a href="#">Zarco</a>
-                                    <a href="#">Austria Construcciones</a>
-                                    <a href="#">Powen</a>
-                                    <a href="#">Lattui</a>
-                                    <a href="#">Civile</a>
-                                    <a href="#">Balgum</a>
-                                    <a href="#">dbuenos Aires</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Toribio</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Zarco</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Austria Construcciones</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Powem</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Lattu</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Civile</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Balguam</a>
+                                    <a class="mobile-subcat link-subcat" href="#">dBuenos Aires</a>
                                 </div>
                             </div>
                             <div class="mobile-category" data-category="2">
@@ -483,11 +483,11 @@
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">Boarding pet</a>
-                                    <a href="#">CVT</a>
-                                    <a href="#">Cines</a>
-                                    <a href="#">Twist</a>
-                                    <a href="#">Demo Tour</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Boarding pass</a>
+                                    <a class="mobile-subcat link-subcat" href="#">CVT</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Cines</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Twist</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Demo Tour</a>
                                 </div>
                             </div>
                             <div class="mobile-category" data-category="3">
@@ -496,10 +496,10 @@
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">Bac Credomatic</a>
-                                    <a href="#">Panam Finance</a>
-                                    <a href="#">Num Finance</a>
-                                    <a href="#">BMA Finance</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Bcc Credomatic</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Panam Finance</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Num Finance</a>
+                                    <a class="mobile-subcat link-subcat" href="#">RMA Finance</a>
                                 </div>
                             </div>
                             <div class="mobile-category" data-category="4">
@@ -508,10 +508,10 @@
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">Fundación Santa María</a>
-                                    <a href="#">DrZeta</a>
-                                    <a href="#">Centro Médico Paternal</a>
-                                    <a href="#">Yoga</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Fundacion Santa Maria</a>
+                                    <a class="mobile-subcat link-subcat" href="#">DrZeta</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Centro Medico Paternal</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Yoga</a>
                                 </div>
                             </div>
                             <div class="mobile-category" data-category="5">
@@ -520,9 +520,9 @@
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">Insside</a>
-                                    <a href="#">RDA</a>
-                                    <a href="#">Pontis</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Insalio</a>
+                                    <a class="mobile-subcat link-subcat" href="#">RDA</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Pontis</a>
                                 </div>
                             </div>
                             <div class="mobile-category" data-category="6">
@@ -531,17 +531,17 @@
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">UW</a>
-                                    <a href="#">Lucatti</a>
-                                    <a href="#">Parfumerie</a>
-                                    <a href="#">Sonax</a>
-                                    <a href="#">DrZeta</a>
-                                    <a href="#">Kankay</a>
-                                    <a href="#">CAME</a>
-                                    <a href="#">Pelufo</a>
-                                    <a href="#">Kevingston</a>
-                                    <a href="#">Sol y Oro</a>
-                                    <a href="#">Quaker</a>
+                                    <a class="mobile-subcat link-subcat" href="#">UW</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Lucatoni</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Parfumerie</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Sonax</a>
+                                    <a class="mobile-subcat link-subcat" href="#">DrZeta</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Kankay</a>
+                                    <a class="mobile-subcat link-subcat" href="#">CAME</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Peluffo</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Kevingston</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Sol y Oro</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Quaker</a>
                                 </div>
                             </div>
                             <div class="mobile-category" data-category="7">
@@ -550,12 +550,12 @@
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">Ayres de Recoleta</a>
-                                    <a href="#">Ker</a>
-                                    <a href="#">Destinar</a>
-                                    <a href="#">Lo Mejor de New York</a>
-                                    <a href="#">Ser Argentino</a>
-                                    <a href="#">Hotel Reino del Plata</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Ayres de Recoleta</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Ker</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Destinar</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Lo Mejor de New York</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Ser Argentino</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Hotel Reino del plata</a>
                                 </div>
                             </div>
                             <div class="mobile-category" data-category="8">
@@ -564,8 +564,8 @@
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">Learn Spanish With Ina</a>
-                                    <a href="#">UADE</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Learn Spanish With Ina</a>
+                                    <a class="mobile-subcat link-subcat" href="#">UADE</a>
                                 </div>
                             </div>
                             <div class="mobile-category" data-category="9">
@@ -574,11 +574,11 @@
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">Multicap</a>
-                                    <a href="#">Current</a>
-                                    <a href="#">Pepsico</a>
-                                    <a href="#">ABB</a>
-                                    <a href="#">Novecento</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Multicap</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Current</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Pepsico</a>
+                                    <a class="mobile-subcat link-subcat" href="#">ABB</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Novecento</a>
                                 </div>
                             </div>
                             <div class="mobile-category" data-category="10">
@@ -587,8 +587,8 @@
                                     <i class="fa-solid fa-chevron-right chevron"></i>
                                 </div>
                                 <div class="mobile-category-links">
-                                    <a href="#">Quaker</a>
-                                    <a href="#">DiFariña</a>
+                                    <a class="mobile-subcat link-subcat" href="#">Quaver</a>
+                                    <a class="mobile-subcat link-subcat" href="#">DiFarina</a>
                                 </div>
                             </div>
                         </div>
