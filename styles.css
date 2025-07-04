@@ -107,7 +107,7 @@ h5 {font-size: 16px; font-family: 'Open Sans', sans-serif;}
 
 .header-section.scrolled .row .search-box input::placeholder {color: black;}
 
-.header-section .row .search-box input {  border: none; outline: none; height: calc(100% - 2px); border-radius: 15px; width: calc(100% - 2px); box-sizing: border-box; padding: 0 15px; background: white; outline: 2px solid var(--orange);}
+.header-section .row .search-box input {  border: none; outline: none; height: calc(100% - 2px); border-radius: 13px; width: calc(100% - 2px); box-sizing: border-box; padding: 0 15px; background: white; outline: 2px solid var(--orange);padding:8px 0 8px 20px;}
 
 
 
