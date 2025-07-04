@@ -86,7 +86,7 @@ h5 {font-size: 16px; font-family: 'Open Sans', sans-serif;}
 
 .header-section .row .search  {display: flex; align-items: center; gap: 10px; position: relative; }
 
-.header-section .row .search .search-box {cursor: pointer; display: flex; height: 100%;}
+.header-section .row .search .search-box {cursor: pointer; display: flex; }
 
 .header-section .row .search .search-box button {background: transparent; border: none;}
 
@@ -94,9 +94,11 @@ h5 {font-size: 16px; font-family: 'Open Sans', sans-serif;}
 
 .header-section .row .search-box:hover input {display: block; border: 1px solid grey;} */
 
-.header-section .row .search-box input {opacity: 0;visibility: hidden;transform: translateX(20px);transition: all 0.3s ease;color: black;border: none;right: calc(100% - 25px);background-color: white;position: absolute;height: 42px;padding-left: 5px;border-radius: 50px;top: 6px;}
+.header-section .row .search-box form  {opacity: 0;visibility: hidden;width: 0;transition: opacity 0.3s ease, width 0.3s ease, visibility 0.3s ease;color: black;border: none;right: calc(100% + 15px);background-color: white;position: absolute;height: 37px;padding: 2px;border-radius: 22px;top: 4px; box-sizing: content-box;}
 
-.header-section .row .search-box:hover input {opacity: 1;visibility: visible;transform: translateX(0);border: 1px solid grey;}
+.header-section .row .search-box:hover form  {opacity: 1;visibility: visible;width: 240px;border: 1px solid grey; }
+
+.header-section .row .search-box form .d-flex {display: flex; align-items: center; justify-content: center; height: 100%;}
 
 
 
@@ -105,7 +107,7 @@ h5 {font-size: 16px; font-family: 'Open Sans', sans-serif;}
 
 .header-section.scrolled .row .search-box input::placeholder {color: black;}
 
-.header-section .row .search-box input:focus { outline: none;}
+.header-section .row .search-box input {  border: none; outline: none; height: calc(100% - 2px); border-radius: 20px; width: calc(100% - 2px); box-sizing: border-box; padding: 0 15px; background: white; outline: 2px solid var(--orange);}
 
 
 
@@ -113,9 +115,8 @@ h5 {font-size: 16px; font-family: 'Open Sans', sans-serif;}
 
 .header-section .row .search-box:hover { display: flex; right: 150px; }
 
-.header-section .row .search-box:hover i {color: black;}
 
-.header-section .row .search-box i {cursor: pointer; position: relative; z-index: 6;}
+.header-section .row .search-box i {cursor: pointer; position: relative; z-index: 6; padding: 15px 20px; margin: -15px -20px;}
 
 /* SEARCH BOX */
 
