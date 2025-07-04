@@ -129,9 +129,13 @@ h5 {font-size: 16px; font-family: 'Open Sans', sans-serif;}
     opacity: 0;
     visibility: hidden;
     transform: translateX(-50%) translateY(-20px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     }
+
+.header-section .modal.switching {
+    transition: none;
+}
 
 .header-section .modal .row {padding: 0; justify-content: start;}
 
@@ -210,7 +214,7 @@ h5 {font-size: 16px; font-family: 'Open Sans', sans-serif;}
 .header-section .modal #modal-close {font-size: 25px; position: absolute; left: calc(100% - 30px); top: 10px; cursor: pointer; 
     opacity: 0;
     transform: scale(0.8);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
     transition-delay: 0.3s;
 }
 

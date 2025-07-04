@@ -14,6 +14,7 @@ $(document).ready(function () {
 
 let activeModalId = null;
 let hoverTimeout = null;
+let isModalOpen = false;
 
 $('.nav-item').on('mouseenter', function (e) {
     e.stopPropagation();
@@ -26,22 +27,51 @@ $('.nav-item').on('mouseenter', function (e) {
         hoverTimeout = null;
     }
 
-    $('.modal').removeClass('active');
-    $('.nav-item').removeClass('active');
-
-    if (modalId) {
-        $('#' + modalId).addClass('active');
-        $(this).addClass('active');
-        activeModalId = modalId;
+    // If switching between modals (modal is already open), don't animate
+    if (isModalOpen && activeModalId !== modalId) {
+        $('.modal').addClass('switching');
+        $('.modal').removeClass('active');
+        $('.nav-item').removeClass('active');
         
-        $('.categories li').removeClass('active');
-        $('.subcategories').removeClass('active');
-        $('.subcategories li').removeClass('active');
-        $('.links-col ul.links').removeClass('active');
-        $('.links-col').hide();
+        if (modalId) {
+            $('#' + modalId).addClass('active');
+            $(this).addClass('active');
+            activeModalId = modalId;
+            
+            $('.categories li').removeClass('active');
+            $('.subcategories').removeClass('active');
+            $('.subcategories li').removeClass('active');
+            $('.links-col ul.links').removeClass('active');
+            $('.links-col').hide();
 
-        $('#' + modalId + ' .categories li').first().addClass('active');
-        $('#' + modalId + ' .subcategories').first().addClass('active');
+            $('#' + modalId + ' .categories li').first().addClass('active');
+            $('#' + modalId + ' .subcategories').first().addClass('active');
+            
+            // Remove switching class after a brief delay
+            setTimeout(function() {
+                $('.modal').removeClass('switching');
+            }, 50);
+        }
+    } else {
+        // First time opening a modal - allow animation
+        $('.modal').removeClass('active');
+        $('.nav-item').removeClass('active');
+
+        if (modalId) {
+            $('#' + modalId).addClass('active');
+            $(this).addClass('active');
+            activeModalId = modalId;
+            isModalOpen = true;
+            
+            $('.categories li').removeClass('active');
+            $('.subcategories').removeClass('active');
+            $('.subcategories li').removeClass('active');
+            $('.links-col ul.links').removeClass('active');
+            $('.links-col').hide();
+
+            $('#' + modalId + ' .categories li').first().addClass('active');
+            $('#' + modalId + ' .subcategories').first().addClass('active');
+        }
     }
 });
 
@@ -52,6 +82,7 @@ $('.nav-item').on('mouseleave', function (e) {
         $('.modal').removeClass('active');
         $('.nav-item').removeClass('active');
         activeModalId = null;
+        isModalOpen = false;
     }, 100);
 });
 
@@ -68,6 +99,7 @@ $('.modal').on('mouseleave', function (e) {
     $('.modal').removeClass('active');
     $('.nav-item').removeClass('active');
     activeModalId = null;
+    isModalOpen = false;
 });
 
 
