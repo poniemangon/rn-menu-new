@@ -1,3 +1,6 @@
+
+
+
 $(document).ready(function () {
     function toggleLogos() {
       if ($(window).scrollTop() === 0 && !($('.burger').hasClass('opened'))) {
@@ -10,11 +13,18 @@ $(document).ready(function () {
     $(window).on('scroll', toggleLogos);
 
 let activeModalId = null;
+let hoverTimeout = null;
 
-$('.nav-item').on('click', function (e) {
+$('.nav-item').on('mouseenter', function (e) {
     e.stopPropagation();
     
     const modalId = $(this).data('modal');
+
+    // Clear any existing timeout
+    if (hoverTimeout) {
+        clearTimeout(hoverTimeout);
+        hoverTimeout = null;
+    }
 
     $('.modal').removeClass('active');
     $('.nav-item').removeClass('active');
@@ -35,18 +45,34 @@ $('.nav-item').on('click', function (e) {
     }
 });
 
+$('.nav-item').on('mouseleave', function (e) {
+    // Set a timeout to close the modal after a short delay
+    // This prevents the modal from closing immediately when moving from nav-item to modal
+    hoverTimeout = setTimeout(function() {
+        $('.modal').removeClass('active');
+        $('.nav-item').removeClass('active');
+        activeModalId = null;
+    }, 100);
+});
 
-$(document).on('click', function () {
-    $('.categories li').removeClass('active');
-    $('.subcategories').removeClass('active');
-    $('.subcategories li').removeClass('active');
-    $('.links-col ul.links').removeClass('active');
-    $('.links-col').hide();
-    
+$('.modal').on('mouseenter', function (e) {
+    // Clear the timeout when hovering over the modal
+    if (hoverTimeout) {
+        clearTimeout(hoverTimeout);
+        hoverTimeout = null;
+    }
+});
+
+$('.modal').on('mouseleave', function (e) {
+    // Close the modal when leaving it
     $('.modal').removeClass('active');
     $('.nav-item').removeClass('active');
     activeModalId = null;
 });
+
+
+// Remove the document click handler since we're using hover now
+// The modals will be controlled by hover events instead
 
 $('.modal').on('click', function (e) {
     e.stopPropagation();
