@@ -114,11 +114,13 @@ h5 {font-size: 16px; font-family: 'Open Sans', sans-serif;}
 
 .header-section .modal * {box-sizing: border-box;}
 
-.header-section .modal {position: absolute; text-align: left; top: 116px; width: 80vw; max-width: 1200px;   left: 50%;transform: translateX(-50%); background: white; border-radius: 10px; overflow: hidden; }
+.header-section .modal {position: absolute; text-align: left; top: 116px; 
+    
+    max-width: 1200px;   left: 50%;transform: translateX(-50%); background: white; border-radius: 10px; overflow: hidden; }
 
-.header-section .modal .row {padding: 0}
+.header-section .modal .row {padding: 0; justify-content: start;}
 
-.header-section .modal .col {width: 25%; padding: 20px; box-sizing: border-box;}
+.header-section .modal .col {width: 20vw; padding: 20px; box-sizing: border-box; max-width: 300px;}
 
 .header-section .modal .title-col {
     padding-bottom: 80px;
@@ -169,6 +171,7 @@ h5 {font-size: 16px; font-family: 'Open Sans', sans-serif;}
 .header-section .modal .links-col {
     background: #fff;
     padding: 20px 0;
+    display: none;
 }
 
 .header-section .modal .links-col ul {display: none; flex-wrap: wrap; justify-content: space-between; row-gap: 5px; flex-direction: column;}
@@ -204,6 +207,8 @@ h5 {font-size: 16px; font-family: 'Open Sans', sans-serif;}
 }
 
 .header-section .modal ul.subcategories li.active {font-weight: 700;}
+
+.header-section .modal .col:nth-child(4) {display: none;}
 
 
 @media(max-width: 992px){
@@ -287,7 +292,8 @@ h5 {font-size: 16px; font-family: 'Open Sans', sans-serif;}
 
 .mobile-category:last-child {border-bottom: none;}
 
-.mobile-category-header {display: flex; justify-content: space-between; align-items: center; padding: 12px 0; cursor: pointer; font-size: 14px; font-weight: 500; color: #555; font-family: 'Open Sans', sans-serif; font-weight: 400;}
+.mobile-category-header {display: flex; justify-content: space-between; align-items: center; padding: 12px 0; cursor: pointer; font-size: 14px;  color: #555; font-family: 'Open Sans', sans-serif; font-weight: 400;}
+.mobile-category-header a {font-size: 14px;  color: #555; font-family: 'Open Sans', sans-serif; font-weight: 400;}
 
 .mobile-category-header .chevron {transition: transform 0.3s ease; color: #999; font-size: 12px;}
 
@@ -374,3 +380,23 @@ body.header-opened {
     font-size: 14px;
 }
 p.link-subcat {font-size: 14px; padding: 8px 0; color: #666;}
+
+
+/* modal customer type */
+
+.header-section .modal.customer-type-modal {
+    width: 60vw;
+    max-width: 900px;
+    padding: 20px;
+}
+.header-section .modal.customer-type-modal .row {justify-content: space-between;}
+
+.header-section .modal.customer-type-modal .col {width: 33.33%; padding: 20px; flex-direction: column; gap: 20px; text-align: center;}
+
+.header-section .modal.customer-type-modal .col .icon-customer {width: 100px; height: 100px;}
+
+.header-section .modal.customer-type-modal .col .body {font-size: 14px; color: #555; font-family: 'Open Sans', sans-serif; font-weight: 400;}
+
+.header-section .modal.customer-type-modal .col .btn {margin-top: 20px; align-self: center; display: inline-block;}
+
+.header-section .modal.customer-type-modal .col img {width: 100%; height: auto; margin: auto;}
