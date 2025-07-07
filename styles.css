@@ -493,5 +493,17 @@ p.link-subcat {font-size: 14px; padding: 8px 0; color: #666;}
 
 .header-section .modal.customer-type-modal .col img {width: 100%; height: auto; margin: auto;}
 
+/* Zona invisible entre nav-list y modal para evitar cierre accidental */
+.bridge-hover-zone {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 40px; /* Ajusta según el espacio entre menú y modal */
+    top: 75px; /* Ajusta según la altura del header/nav-list */
+    z-index: 100;
+    pointer-events: auto;
+    background: transparent;
+}
+
 
 

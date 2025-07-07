@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(function () {
     function toggleLogos() {
       if ($(window).scrollTop() === 0 && !($('.burger').hasClass('opened'))) {
@@ -102,6 +99,22 @@ $('.modal').on('mouseleave', function (e) {
     isModalOpen = false;
 });
 
+// --- PUENTE INVISIBLE ENTRE NAV Y MODAL ---
+$('.bridge-hover-zone').on('mouseenter', function (e) {
+    if (hoverTimeout) {
+        clearTimeout(hoverTimeout);
+        hoverTimeout = null;
+    }
+});
+$('.bridge-hover-zone').on('mouseleave', function (e) {
+    // Inicia el timeout de cierre igual que en nav-item
+    hoverTimeout = setTimeout(function() {
+        $('.modal').removeClass('active');
+        $('.nav-item').removeClass('active');
+        activeModalId = null;
+        isModalOpen = false;
+    }, 100);
+});
 
 // Remove the document click handler since we're using hover now
 // The modals will be controlled by hover events instead
