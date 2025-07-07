@@ -149,32 +149,30 @@ $('.categories li').on('click', function () {
     $('.subcategories li').removeClass('active');
 });
 
-
-// Disabled JavaScript for subcategories on desktop - now using CSS hover only
-// Mobile functionality remains unchanged
-if (window.innerWidth >= 992) {
-    // Desktop: Disable subcategory click handlers, use CSS hover only
-} else {
-    // Mobile: Keep existing functionality
-    $('.subcategories').on('click', 'li.has-children', function () {
-        var subcatId = $(this).data('subcategory');
-        
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
-        
-        // Check if links-col is visible
-        if ($('.links-col').is(':visible')) {
-            // If visible, just change the links content
-            $('.links-col ul.links').removeClass('active');
-            $('.links-col ul.links[data-subcategory="' + subcatId + '"]').addClass('active');
-        } else {
-            // If hidden, show it directly
-            $('.links-col').show();
-            $('.links-col ul.links').removeClass('active');
-            $('.links-col ul.links[data-subcategory="' + subcatId + '"]').addClass('active');
-        }
-    });
-}
+// Habilitar click en subcategorías con hijos en desktop y mobile
+$('.subcategories').on('click', 'li.has-children', function (e) {
+    // Si el click fue en un <a> dentro de subcat-links, no togglear
+    if ($(e.target).closest('a').length > 0) return;
+    var $this = $(this);
+    var subcatId = $this.data('subcategory');
+    if ($this.hasClass('active')) {
+        $this.removeClass('active');
+        // Opcional: también ocultar links-col si quieres
+        // $('.links-col').hide();
+        return;
+    }
+    $this.siblings().removeClass('active');
+    $this.addClass('active');
+    // Check if links-col es visible
+    if ($('.links-col').is(':visible')) {
+        $('.links-col ul.links').removeClass('active');
+        $('.links-col ul.links[data-subcategory="' + subcatId + '"]').addClass('active');
+    } else {
+        $('.links-col').show();
+        $('.links-col ul.links').removeClass('active');
+        $('.links-col ul.links[data-subcategory="' + subcatId + '"]').addClass('active');
+    }
+});
 
 $('.burger').on('click', function(){
     $('.burger').toggleClass('opened');

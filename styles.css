@@ -248,32 +248,33 @@ h5 {font-size: 16px; font-family: 'Open Sans', sans-serif;}
 /* New hover functionality for subcategories with children */
 .header-section .modal .subcategories-col ul li.has-children {position: relative; padding: 10px 20px;}
 
-.header-section .modal .subcategories-col ul li.has-children i {transition: transform 0.3s ease;}
+.header-section .modal .subcategories-col ul li.has-children i {
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+}
 
-.header-section .modal .subcategories-col ul li.has-children:hover span {padding-bottom: 10px;}
+.header-section .modal .subcategories-col ul li.has-children.active i {
+    transform: rotate(90deg);
+}
 
-.header-section .modal .subcategories-col ul li.has-children:hover i {transform: rotate(90deg);}
-
+/* Animación suave para subcat-links solo con max-height y opacity */
 .header-section .modal .subcategories-col ul li.has-children .subcat-links {
     max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
-    padding-left: 20px;
-    margin-top: 5px;
-    border-radius: 4px;
     opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
     transform: translateY(-10px);
     display: block;
+    visibility: hidden;
 }
-
-.header-section .modal .row .subcategories-col ul.subcategories li.has-children:hover .subcat-links {
+.header-section .modal .subcategories-col ul li.has-children.active .subcat-links {
     max-height: 200px;
-    padding-top: 10px;
     opacity: 1;
+    overflow: visible;
     transform: translateY(0);
+    visibility: visible;    
 }
 
-
+.header-section .modal .subcategories-col ul li.has-children .subcat-links li:first-child {padding-top: 10px;}
 
 .header-section .modal .subcategories-col ul li.has-children .subcat-links li a {
     color: black;
@@ -504,6 +505,26 @@ p.link-subcat {font-size: 14px; padding: 8px 0; color: #666;}
     pointer-events: auto;
     background: transparent;
 }
+
+/* Animación para los links internos de subcat-links, staggered inverso al cerrar */
+.header-section .modal .subcategories-col ul li.has-children .subcat-links li:nth-child(1) { transition-delay: 0.40s; }
+.header-section .modal .subcategories-col ul li.has-children .subcat-links li:nth-child(2) { transition-delay: 0.35s; }
+.header-section .modal .subcategories-col ul li.has-children .subcat-links li:nth-child(3) { transition-delay: 0.30s; }
+.header-section .modal .subcategories-col ul li.has-children .subcat-links li:nth-child(4) { transition-delay: 0.25s; }
+.header-section .modal .subcategories-col ul li.has-children .subcat-links li:nth-child(5) { transition-delay: 0.20s; }
+.header-section .modal .subcategories-col ul li.has-children .subcat-links li:nth-child(6) { transition-delay: 0.15s; }
+.header-section .modal .subcategories-col ul li.has-children .subcat-links li:nth-child(7) { transition-delay: 0.10s; }
+.header-section .modal .subcategories-col ul li.has-children .subcat-links li:nth-child(8) { transition-delay: 0.05s; }
+
+/* Cuando está activo, delays normales para abrir en cascada */
+.header-section .modal .subcategories-col ul li.has-children.active .subcat-links li:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateY(0);}
+.header-section .modal .subcategories-col ul li.has-children.active .subcat-links li:nth-child(2) { transition-delay: 0.10s; opacity: 1; transform: translateY(0);}
+.header-section .modal .subcategories-col ul li.has-children.active .subcat-links li:nth-child(3) { transition-delay: 0.15s; opacity: 1; transform: translateY(0);}
+.header-section .modal .subcategories-col ul li.has-children.active .subcat-links li:nth-child(4) { transition-delay: 0.20s; opacity: 1; transform: translateY(0);}
+.header-section .modal .subcategories-col ul li.has-children.active .subcat-links li:nth-child(5) { transition-delay: 0.25s; opacity: 1; transform: translateY(0);}
+.header-section .modal .subcategories-col ul li.has-children.active .subcat-links li:nth-child(6) { transition-delay: 0.30s; opacity: 1; transform: translateY(0);}
+.header-section .modal .subcategories-col ul li.has-children.active .subcat-links li:nth-child(7) { transition-delay: 0.35s; opacity: 1; transform: translateY(0);}
+.header-section .modal .subcategories-col ul li.has-children.active .subcat-links li:nth-child(8) { transition-delay: 0.40s; opacity: 1; transform: translateY(0);}
 
 
 
