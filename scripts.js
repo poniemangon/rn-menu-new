@@ -137,24 +137,31 @@ $('.categories li').on('click', function () {
 });
 
 
-$('.subcategories').on('click', 'li.has-children', function () {
-    var subcatId = $(this).data('subcategory');
-    
-    $(this).siblings().removeClass('active');
-    $(this).addClass('active');
-    
-    // Check if links-col is visible
-    if ($('.links-col').is(':visible')) {
-        // If visible, just change the links content
-        $('.links-col ul.links').removeClass('active');
-        $('.links-col ul.links[data-subcategory="' + subcatId + '"]').addClass('active');
-    } else {
-        // If hidden, show it directly
-        $('.links-col').show();
-        $('.links-col ul.links').removeClass('active');
-        $('.links-col ul.links[data-subcategory="' + subcatId + '"]').addClass('active');
-    }
-});
+// Disabled JavaScript for subcategories on desktop - now using CSS hover only
+// Mobile functionality remains unchanged
+if (window.innerWidth >= 992) {
+    // Desktop: Disable subcategory click handlers, use CSS hover only
+} else {
+    // Mobile: Keep existing functionality
+    $('.subcategories').on('click', 'li.has-children', function () {
+        var subcatId = $(this).data('subcategory');
+        
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+        
+        // Check if links-col is visible
+        if ($('.links-col').is(':visible')) {
+            // If visible, just change the links content
+            $('.links-col ul.links').removeClass('active');
+            $('.links-col ul.links[data-subcategory="' + subcatId + '"]').addClass('active');
+        } else {
+            // If hidden, show it directly
+            $('.links-col').show();
+            $('.links-col ul.links').removeClass('active');
+            $('.links-col ul.links[data-subcategory="' + subcatId + '"]').addClass('active');
+        }
+    });
+}
 
 $('.burger').on('click', function(){
     $('.burger').toggleClass('opened');

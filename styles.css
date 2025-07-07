@@ -98,7 +98,11 @@ h5 {font-size: 16px; font-family: 'Open Sans', sans-serif;}
 
 .header-section .row .search-box:hover form  {opacity: 1;visibility: visible;width: 240px; }
 
+.header-section .row .search-box:hover ~ .nav-col {opacity: 0; transition: opacity 0.3s ease;}
+
 .header-section .row .search-box form .d-flex {display: flex; align-items: center; justify-content: center; height: 100%;}
+
+
 
 
 
@@ -230,17 +234,65 @@ h5 {font-size: 16px; font-family: 'Open Sans', sans-serif;}
 
 .header-section .modal ul.subcategories.active {display: block;}
 
-.header-section .modal ul.subcategories li {padding: 10px 20px; margin-bottom: 0;}
+
 
 .header-section .modal ul.subcategories li i {margin-left: 5px;}
 
 .header-section .modal ul.subcategories li:hover {
     font-weight: 700;
     cursor: pointer;
-    background-color: #ededed;
 }
 
 .header-section .modal ul.subcategories li.active {font-weight: 700;}
+
+/* New hover functionality for subcategories with children */
+.header-section .modal .subcategories-col ul li.has-children {position: relative; padding: 10px 20px;}
+
+.header-section .modal .subcategories-col ul li.has-children i {transition: transform 0.3s ease;}
+
+.header-section .modal .subcategories-col ul li.has-children:hover span {padding-bottom: 10px;}
+
+.header-section .modal .subcategories-col ul li.has-children:hover i {transform: rotate(90deg);}
+
+.header-section .modal .subcategories-col ul li.has-children .subcat-links {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+    padding-left: 20px;
+    margin-top: 5px;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateY(-10px);
+    display: block;
+}
+
+.header-section .modal .row .subcategories-col ul.subcategories li.has-children:hover .subcat-links {
+    max-height: 200px;
+    padding-top: 10px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.header-section .modal .subcategories-col ul li.has-children .subcat-links li a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    padding: 0;
+    font-weight: 400;
+    /* border-bottom: 2px solid transparent; */
+    display: inline;
+    box-sizing: border-box;
+}
+
+.header-section .modal .subcategories-col ul li.has-children .subcat-links li a:hover {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+  
+ 
+}
 
 .header-section .modal .col:nth-child(4) {display: none;}
 
@@ -440,3 +492,6 @@ p.link-subcat {font-size: 14px; padding: 8px 0; color: #666;}
 .header-section .modal.customer-type-modal .col .btn:hover {background-color: black;}
 
 .header-section .modal.customer-type-modal .col img {width: 100%; height: auto; margin: auto;}
+
+
+
