@@ -39,7 +39,7 @@ $('.nav-item').on('mouseenter', function (e) {
             $('.subcategories').removeClass('active');
             $('.subcategories li').removeClass('active');
             $('.links-col ul.links').removeClass('active');
-            $('.links-col').hide();
+            $('.links-col').removeClass('active');
 
             $('#' + modalId + ' .categories li').first().addClass('active');
             $('#' + modalId + ' .subcategories').first().addClass('active');
@@ -64,7 +64,7 @@ $('.nav-item').on('mouseenter', function (e) {
             $('.subcategories').removeClass('active');
             $('.subcategories li').removeClass('active');
             $('.links-col ul.links').removeClass('active');
-            $('.links-col').hide();
+            $('.links-col').removeClass('active');
 
             $('#' + modalId + ' .categories li').first().addClass('active');
             $('#' + modalId + ' .subcategories').first().addClass('active');
@@ -128,7 +128,7 @@ $('.fa-xmark').on('click', function () {
     $('.subcategories').removeClass('active');
     $('.subcategories li').removeClass('active');
     $('.links-col ul.links').removeClass('active');
-    $('.links-col').hide();
+    $('.links-col').removeClass('active');
 
     $('.categories li').first().addClass('active');
 
@@ -145,7 +145,7 @@ $('.categories li').on('click', function () {
 
     $('.subcategories').removeClass('active');
     $('.subcategories[data-category="' + category + '"]').addClass('active');
-    $('.links-col').hide();
+    $('.links-col').removeClass('active');
     $('.subcategories li').removeClass('active');
 });
 
@@ -158,17 +158,17 @@ $('.subcategories').on('click', 'li.has-children', function (e) {
     if ($this.hasClass('active')) {
         $this.removeClass('active');
         // Opcional: también ocultar links-col si quieres
-        // $('.links-col').hide();
+        // $('.links-col').removeClass('active');
         return;
     }
     $this.siblings().removeClass('active');
     $this.addClass('active');
     // Check if links-col es visible
-    if ($('.links-col').is(':visible')) {
+    if ($('.links-col').hasClass('active')) {
         $('.links-col ul.links').removeClass('active');
         $('.links-col ul.links[data-subcategory="' + subcatId + '"]').addClass('active');
     } else {
-        $('.links-col').show();
+        $('.links-col').addClass('active');
         $('.links-col ul.links').removeClass('active');
         $('.links-col ul.links[data-subcategory="' + subcatId + '"]').addClass('active');
     }
@@ -212,49 +212,29 @@ $('.mobile-category-header').on('click', function(e) {
 });
 
 
-$(document).on('click', '.mobile-nav-item-header', function() {
-    var $navItem = $(this).closest('.mobile-nav-item');
-    var $categories = $navItem.find('.mobile-nav-categories').first();
-    // Oculta todos los demás
-    $navItem.nextAll('.mobile-nav-item').find('.mobile-nav-categories').hide();
+$(document).on('click', '.mobile-nav-item', function() {
+    
+    // Cerrar todos los demás
     $navItem.nextAll('.mobile-nav-item').removeClass('opened');
-    // Muestra este
-    $categories.toggle();
-    if ($categories.is(':visible')) {
-        $navItem.addClass('opened');
-    } else {
-        $navItem.removeClass('opened');
-    }
+    // Toggle este
+    $(this).toggleClass('opened');
+    
 });
 
 
 $(document).on('click', '.mobile-subcat.has-children p', function(e) {
     e.stopPropagation();
     var $subcat = $(this).closest('.mobile-subcat.has-children');
-    var $links = $subcat.find('.mobile-subcat-links').first();
     // Cerrar solo los que están después del actual
-    $subcat.nextAll('.has-children').find('.mobile-subcat-links').hide();
     $subcat.nextAll('.has-children').removeClass('opened');
-    $links.toggle();
-    if ($links.is(':visible')) {
-        $subcat.addClass('opened');
-    } else {
-        $subcat.removeClass('opened');
-    }
+    $subcat.toggleClass('opened');
 });
 
 
 $(document).on('click', '.mobile-category-header', function() {
     var $category = $(this).closest('.mobile-category');
-    var $links = $category.find('.mobile-category-links').first();
-    $category.nextAll('.mobile-category').find('.mobile-category-links').hide();
     $category.nextAll('.mobile-category').removeClass('opened');
-    $links.toggle();
-    if ($links.is(':visible')) {
-        $category.addClass('opened');
-    } else {
-        $category.removeClass('opened');
-    }
+    $category.toggleClass('opened');
 });
 
 
